@@ -1,4 +1,4 @@
-name: LETRELLO-APP.
+name: LETRELLO-APP
  
 # Controls when the action will run. 
 on:
@@ -28,11 +28,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # - name: install dep and build
-      #   run: |
-      #     cd client
-      #     npm run build
-      #    cd ..
+      - name: install dep and build
+        run: |
+          npm ci
+          cd client
+          npm run build
       #    pm2 stop 0
       #    pm2 start 0
       #    pm2 save
