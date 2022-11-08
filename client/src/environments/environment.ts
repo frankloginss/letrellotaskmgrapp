@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://192.168.43.236:4001/api',
-  socketUrl: 'http://192.168.43.236:4001'
-  // apiUrl: 'http://localhost:4001/api',
-  // socketUrl: 'http://localhost:4001'
+  // apiUrl: 'http://192.168.43.236:4001/api',
+  // socketUrl: 'http://192.168.43.236:4001'
+  apiUrl: 'http://localhost:4001/api',
+  socketUrl: 'http://localhost:4001'
 };
 
 /*
