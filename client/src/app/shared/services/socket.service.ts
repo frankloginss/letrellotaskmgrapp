@@ -22,7 +22,7 @@ export class SocketService {
             throw new Error('Socket connection is not established')
         }
         this.socket.disconnect
-        console.log("socket io disconnected");
+        // console.log("socket io disconnected");
         
     }
 

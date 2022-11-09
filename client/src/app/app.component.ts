@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
         this.authService.setCurrentUser(currentUser);
       },
       error: (err) => {
-        console.log('err', err);
+        // console.log('err', err);
         this.authService.setCurrentUser(null);
       },
     });

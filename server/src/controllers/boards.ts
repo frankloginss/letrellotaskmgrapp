@@ -64,7 +64,7 @@ export const joinBoard = (
   data: { boardId: string }
 ) => {
   // console.log("server socket io join", socket.user?.username);
-  console.log("server socket io join", socket.user);
+  // console.log("server socket io join", socket.user);
   socket.join(data.boardId);
 };
 
@@ -73,7 +73,7 @@ export const leaveBoard = (
   socket: Socket,
   data: { boardId: string }
 ) => {
-  console.log("server socket io leave", data.boardId);
+  // console.log("server socket io leave", data.boardId);
   socket.leave(data.boardId);
 };
 
