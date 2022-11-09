@@ -38,8 +38,8 @@ export class RegisterComponent {
         this.router.navigateByUrl('/');
       },
       error: (err: HttpErrorResponse) => {
-        console.log('err', err.error);
-        console.log('err', err.error.join(', '));
+        //console.log('err', err.error);
+        //console.log('err', err.error.join(', '));
         this.errorMessage = err.error.join(', ');
       },
     });
