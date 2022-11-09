@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { createServer } from "http";
+import { createServer } from "https";
 import { Server } from "socket.io";
 import { Socket } from "./types/socket.interface";
 import mongoose from "mongoose";
@@ -13,9 +13,16 @@ import { SocketEventsEnum } from "./types/socketEvents.enum";
 import jwt from "jsonwebtoken";
 import { secret } from "./config";
 import User from "./models/user"
+import { readFileSync } from "fs";
+
+let options = {
+  cert: readFileSync('/etc/letsencrypt/live/letrello-taskmgrapp.cf/cert.pem'),
+  // ca: readFileSync('/etc/letsencrypt/live/letrello-taskmgrapp.cf/'),
+  key: readFileSync('/etc/letsencrypt/live/letrello-taskmgrapp.cf/privkey.pem'),
+};
 
 const app = express();
-const httpServer = createServer(app);
+const httpServer = createServer(options, app);
 const io = new Server(httpServer, {
   cors: {
     // origin: 'http://domain.com',
