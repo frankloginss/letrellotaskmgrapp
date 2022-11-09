@@ -39,7 +39,7 @@ export class LoginComponent {
                 
             },
             error: (err: HttpErrorResponse) => {
-                console.log('err', err.error.emailOrPassword);
+                //console.log('err', err.error.emailOrPassword);
                 this.errorMessage = err.error.emailOrPassword;
               },
         })
