@@ -26,7 +26,7 @@ const db_name: string = 'letrello';
 
 // app.use(cors());
 /** Using cors to connect via ip address to be accessed outside system*/
-var allowedOrigins = ["http://letrello-taskmgrapp.cf", "http://localhost:4200"];
+var allowedOrigins = ["https://letrello-taskmgrapp.cf", "https://localhost:4200", "http://letrello-taskmgrapp.cf", "http://localhost:4200"];
 
 app.use(
   cors({
